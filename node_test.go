@@ -230,15 +230,15 @@ func TestRemoveFromTree(t *testing.T) {
 
 func TestSelectElement(t *testing.T) {
 	s := `<?xml version="1.0" encoding="UTF-8"?>
-    <AAA>
-        <BBB id="1"/>
-        <CCC id="2">
-            <DDD/>
-        </CCC>
+	<AAA>
+		<BBB id="1"/>
+		<CCC id="2">
+			<DDD/>
+		</CCC>
 		<CCC id="3">
-            <DDD/>
-        </CCC>
-     </AAA>`
+			<DDD/>
+		</CCC>
+	</AAA>`
 	root, err := Parse(strings.NewReader(s))
 	if err != nil {
 		t.Error(err)

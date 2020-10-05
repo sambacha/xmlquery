@@ -227,25 +227,25 @@ func TestMissingNamespace(t *testing.T) {
 func TestTooNested(t *testing.T) {
 	s := `<?xml version="1.0" encoding="UTF-8"?>
 	<!-- comment here-->
-    <AAA>
-        <BBB>
-            <DDD>
-                <CCC>
-                    <DDD/>
-                    <EEE/>
-                </CCC>
-            </DDD>
-        </BBB>
-        <CCC>
-            <DDD>
-                <EEE>
-                    <DDD>
-                        <FFF/>
-                    </DDD>
-                </EEE>
-            </DDD>
-        </CCC>
-     </AAA>`
+	<AAA>
+		<BBB>
+			<DDD>
+				<CCC>
+					<DDD/>
+					<EEE/>
+				</CCC>
+			</DDD>
+		</BBB>
+		<CCC>
+			<DDD>
+				<EEE>
+					<DDD>
+						<FFF/>
+					</DDD>
+				</EEE>
+			</DDD>
+		</CCC>
+	</AAA>`
 	root, err := Parse(strings.NewReader(s))
 	if err != nil {
 		t.Error(err)
@@ -269,8 +269,8 @@ func TestTooNested(t *testing.T) {
 
 func TestAttributeWithNamespace(t *testing.T) {
 	s := `<?xml version="1.0" encoding="UTF-8"?><root xmlns:n1="http://www.w3.org">
-   <good a="1" b="2" />
-   <good a="1" n1:a="2" /></root>`
+	<good a="1" b="2" />
+	<good a="1" n1:a="2" /></root>`
 	doc, _ := Parse(strings.NewReader(s))
 	n := FindOne(doc, "//good[@n1:a='2']")
 	if n == nil {

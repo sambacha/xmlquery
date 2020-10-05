@@ -8,12 +8,12 @@ xmlquery
 Overview
 ===
 
-`xmlquery` is an XPath query package for XML documents, allowing you to extract 
+`xmlquery` is an XPath query package for XML documents, allowing you to extract
 data or evaluate from XML documents with an XPath expression.
 
 `xmlquery` has a built-in query object caching feature that caches recently used
-XPATH query strings. Enabling caching can avoid recompile XPath expression for 
-each query. 
+XPATH query strings. Enabling caching can avoid recompile XPath expression for
+each query.
 
 Change Logs
 ===
@@ -21,10 +21,10 @@ Change Logs
 2020-08-??
 - Add XML stream loading and parsing support.
 
-2019-11-11 
+2019-11-11
 - Add XPath query caching.
 
-2019-10-05 
+2019-10-05
 - Add new methods compatible with invalid XPath expression error: `QueryAll` and `Query`.
 - Add `QuerySelector` and `QuerySelectorAll` methods, support for reused query objects.
 - PR [#12](https://github.com/antchfx/xmlquery/pull/12) (Thanks @FrancescoIlario)
@@ -164,10 +164,10 @@ an error.
 
 #### Can I save my query expression object for the next query?
 
-Yes, you can. We provide `QuerySelector` and `QuerySelectorAll` methods; they 
+Yes, you can. We provide `QuerySelector` and `QuerySelectorAll` methods; they
 accept your query expression object.
 
-Caching a query expression object avoids recompiling the XPath query 
+Caching a query expression object avoids recompiling the XPath query
 expression, improving query performance.
 
 #### Create XML document.
